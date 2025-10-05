@@ -17,11 +17,16 @@ public class Main {
 
         // Calculate gross pay
         double grossPay = hoursWorked * payRate;
+        if (hoursWorked == 0) {
+            System.out.println("Oops! You didn't work, so there is no payment at this time.\n" +
+                    "Work is good. I suggest working so that you can receive payment and spend it however you want.");
+        }
 
         // Result
         System.out.println("\nEmployee: " + name);
         System.out.println("Gross pay: $" + grossPay);
 
         myScanner.close();
+
     }
 }
